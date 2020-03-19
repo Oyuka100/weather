@@ -1,0 +1,23 @@
+#header{
+    background-color: #6C777D;
+    color: white;
+}
+#weatherInfo{
+   border: 2px solid grey;
+   margin-top: 20px;
+   
+}
+#city{
+    margin-top: 20px;
+}
+button{
+    background-color: #4BB3FD;
+}
+.forecast{
+    background-color: #4BB3FD;
+    border: 1px solid grey;
+    margin-top: 10px;
+    margin-right: 2px;
+    padding: 5px;
+   
+}
