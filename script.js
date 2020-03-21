@@ -64,19 +64,9 @@ $(document).ready(function(){
           method: "GET",
       }).then(function(response2){
           console.log(response2)
-          $(".first").append("<p>" + response2.list[0].dt_txt.slice(0,10) + "</p> <br>");
-
-
-
-
+          $(".first").append("<p>" + response2.list[1].dt_txt.slice(0,10) + "</p> <br>");
+          $(".first").append(`<img src="http://openweathermap.org/img/wn/${response2.list[0].weather[0].icon}.png">`)
           
-         // $(".first").append("<img src='http://openweathermap.org/img/wn/'>" +response2.list[0].weather.icon + ".png")
-
-         $(".first").append(`<img src="http://openweatherap.org/img/wn/${response2.list[0].weather.icon}.png>`) 
-
-
-
-
           let temp1 = (response2.list[0].main.temp - 273.15) * 1.80 +32;
           $(".first").append("Temperature: (F) " + temp1.toFixed(2).slice(0,2)+ "<br>");
           $(".first").append("Humidity: " + response2.list[0].main.humidity + "%" + "<br>");
@@ -84,30 +74,38 @@ $(document).ready(function(){
           
          
           $(".second").append("<p>" + response2.list[8].dt_txt.slice(0,10) + "</p> <br>");
+          $(".second").append(`<img src="http://openweathermap.org/img/wn/${response2.list[8].weather[0].icon}.png">`)
+          
           let temp2 = (response2.list[8].main.temp - 273.15) * 1.80 +32;
           $(".second").append("Temperature: (F) " + temp2.toFixed(2).slice(0,2)+ "<br>");
           $(".second").append("Humidity: " + response2.list[8].main.humidity + "%" + "<br>");
          
           
           
-          $(".third").append("<p>" + response2.list[10].dt_txt.slice(0,10) + "</p> <br>");
-          let temp3 = (response2.list[10].main.temp - 273.15) * 1.80 +32;
+          $(".third").append("<p>" + response2.list[18].dt_txt.slice(0,10) + "</p> <br>");
+          $(".third").append(`<img src="http://openweathermap.org/img/wn/${response2.list[18].weather[0].icon}.png">`)
+
+          let temp3 = (response2.list[18].main.temp - 273.15) * 1.80 +32;
           $(".third").append("Temperature: (F) " + temp3.toFixed(2).slice(0,2)+ "<br>");
-          $(".third").append("Humidity: " + response2.list[10].main.humidity + "%" + "<br>");
+          $(".third").append("Humidity: " + response2.list[18].main.humidity + "%" + "<br>");
          
          
          
-          $(".fourth").append("<p>" + response2.list[18].dt_txt.slice(0,10) + "</p> <br>");
-          let temp4 = (response2.list[18].main.temp - 273.15) * 1.80 +32;
+          $(".fourth").append("<p>" + response2.list[28].dt_txt.slice(0,10) + "</p> <br>");
+          $(".fourth").append(`<img src="http://openweathermap.org/img/wn/${response2.list[28].weather[0].icon}.png">`)
+
+          let temp4 = (response2.list[28].main.temp - 273.15) * 1.80 +32;
           $(".fourth").append("Temperature: (F) " + temp4.toFixed(2).slice(0,2)+ "<br>");
-          $(".fourth").append("Humidity: " + response2.list[18].main.humidity + "%" + "<br>");
+          $(".fourth").append("Humidity: " + response2.list[28].main.humidity + "%" + "<br>");
           
           
           
-          $(".fifth").append("<p>" + response2.list[28].dt_txt.slice(0,10) + "</p> <br>");
-          let temp5 = (response2.list[28].main.temp - 273.15) * 1.80 +32;
+          $(".fifth").append("<p>" + response2.list[36].dt_txt.slice(0,10) + "</p> <br>");
+          $(".fifth").append(`<img src="http://openweathermap.org/img/wn/${response2.list[36].weather[0].icon}.png">`)
+
+          let temp5 = (response2.list[36].main.temp - 273.15) * 1.80 +32;
           $(".fifth").append("Temperature: (F) " + temp5.toFixed(2).slice(0,2)+ "<br>");
-          $(".fifth").append("Humidity: " + response2.list[28].main.humidity + "%" + "<br>");
+          $(".fifth").append("Humidity: " + response2.list[36].main.humidity + "%" + "<br>");
          
          });
 
