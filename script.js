@@ -65,7 +65,18 @@ $(document).ready(function(){
       }).then(function(response2){
           console.log(response2)
           $(".first").append("<p>" + response2.list[0].dt_txt.slice(0,10) + "</p> <br>");
-          $(".first").append(response2.list[4].weather.icon)
+
+
+
+
+          
+         // $(".first").append("<img src='http://openweathermap.org/img/wn/'>" +response2.list[0].weather.icon + ".png")
+
+         $(".first").append(`<img src="http://openweatherap.org/img/wn/${response2.list[0].weather.icon}.png>`) 
+
+
+
+
           let temp1 = (response2.list[0].main.temp - 273.15) * 1.80 +32;
           $(".first").append("Temperature: (F) " + temp1.toFixed(2).slice(0,2)+ "<br>");
           $(".first").append("Humidity: " + response2.list[0].main.humidity + "%" + "<br>");
@@ -99,6 +110,9 @@ $(document).ready(function(){
           $(".fifth").append("Humidity: " + response2.list[28].main.humidity + "%" + "<br>");
          
          });
+
+
+         
 
 
    });
